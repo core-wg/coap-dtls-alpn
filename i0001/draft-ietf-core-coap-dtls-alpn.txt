@@ -5,32 +5,30 @@
 Constrained RESTful Environments                           M. S. Lenders
 Internet-Draft                                                TU Dresden
 Intended status: Standards Track                               C. Amsüss
-Expires: 9 March 2025                                                   
+Expires: 22 May 2025                                                    
                                                            T. C. Schmidt
                                                              HAW Hamburg
                                                              M. Wählisch
                                         TU Dresden & Barkhausen Institut
-                                                        5 September 2024
+                                                        18 November 2024
 
 
-    Service Binding and Parameter Specification for CoAP over (D)TLS
-                draft-lenders-core-coap-dtls-svcb-latest
+                ALPN ID Specification for CoAP over DTLS
+                 draft-ietf-core-coap-dtls-alpn-latest
 
 Abstract
 
-   This document specifies the usage of Service Parameters as used in
-   SVCB ("Service Binding") DNS resource records for the discovery of
-   transport-layer-secured CoAP services.
+   This document specifies an Application-Layer Protocol Negotiation
+   (ALPN) ID for transport-layer-secured CoAP services.
 
 About This Document
 
    This note is to be removed before publishing as an RFC.
 
    The latest revision of this draft can be found at https://anr-bmbf-
-   pivot.github.io/draft-lenders-core-coap-dtls-svcb/draft-lenders-core-
-   coap-dtls-svcb.html.  Status information for this document may be
-   found at https://datatracker.ietf.org/doc/draft-lenders-core-coap-
-   dtls-svcb/.
+   pivot.github.io/draft-ietf-core-coap-dtls-alpn/draft-ietf-core-coap-
+   dtls-alpn.html.  Status information for this document may be found at
+   https://datatracker.ietf.org/doc/draft-ietf-core-coap-dtls-alpn/.
 
    Discussion of this document takes place on the Constrained RESTful
    Environments Working Group mailing list (mailto:core@ietf.org), which
@@ -38,7 +36,7 @@ About This Document
    Subscribe at https://www.ietf.org/mailman/listinfo/core/.
 
    Source for this draft and an issue tracker can be found at
-   https://github.com/anr-bmbf-pivot/draft-lenders-core-coap-dtls-svcb.
+   https://github.com/anr-bmbf-pivot/draft-ietf-core-coap-dtls-alpn.
 
 Status of This Memo
 
@@ -55,7 +53,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 9 March 2025.
+   This Internet-Draft will expire on 22 May 2025.
 
 Copyright Notice
 
@@ -74,63 +72,57 @@ Copyright Notice
 Table of Contents
 
    1.  Introduction
-   2.  Terminology
-   3.  Application-Layer Protocol Negotiation (ALPN) IDs
-   4.  Security Considerations
-   5.  IANA Considerations
-     5.1.  TLS ALPN for CoAP
-   6.  References
-     6.1.  Normative References
-     6.2.  Informative References
+   2.  Application-Layer Protocol Negotiation (ALPN) IDs
+   3.  Security Considerations
+   4.  IANA Considerations
+     4.1.  TLS ALPN for CoAP
+   5.  References
+     5.1.  Normative References
+     5.2.  Informative References
    Appendix A.  Change Log
    Acknowledgments
    Authors' Addresses
 
 1.  Introduction
 
-   [RFC9460] specifies the "SVCB" ("Service Binding") DNS resource
-   records for looking up communication endpoints of a service.  Service
-   Parameters (SvcParams) are used to carry that information.  This
-   document specifies which information from SvcParams can be used with
-   CoAP services that are secured by transport security, namely TLS and
-   DTLS.  As an example, this information can be obtained as part of the
+   Application-Layer Protocol Negotiation (ALPN) enable communicating
+   parties to agree on an application-layer protocol during a Transport
+   Layer Security (TLS) handshake using an ALPN ID.  This ALPN ID can be
+   discovered for services as part of Service Bindings (SVCB) via the
+   DNS, using SVCB resource records with the "alpn" Service Parameter
+   Keys.  As an example, this information can be obtained as part of the
    discovery of DNS over CoAP (DoC) servers (see
    [I-D.ietf-core-dns-over-coap]) that deploy TLS or DTLS to secure
-   their messages.
+   their messages.  This document specifies an ALPN ID for CoAP services
+   that are secured by transport security using DTLS.  An ALPN ID for
+   CoAP service secured by TLS has already been specified in [RFC8323].
 
-2.  Terminology
+2.  Application-Layer Protocol Negotiation (ALPN) IDs
 
-   SvcParams denotes the field in either DNS SVCB/HTTPS records as
-   defined in [RFC9460], or DHCP and RA messages as defined in
-   [RFC9463].
+   For CoAP over TLS an ALPN ID was defined as "coap" in [RFC8323].  As
+   it is not advisable to re-use the same ALPN ID for a different
+   transport layer, an ALPN for CoAP over DTLS is registered in
+   Section 4.
 
-   The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT",
-   "SHOULD", "SHOULD NOT", "RECOMMENDED", "NOT RECOMMENDED", "MAY", and
-   "OPTIONAL" in this document are to be interpreted as described in
-   BCP 14 [RFC2119] [RFC8174] when, and only when, they appear in all
-   capitals, as shown here.
+   ALPN ID values have variable length.  Here, a short value ("co") is
+   allocated for CoAP over DTLS, as this can avoid fragmentation of
+   Client Hello and Server Hello messages in constrained networks with
+   link-layer fragmentation, such as 6LoWPAN [RFC4944].
 
-3.  Application-Layer Protocol Negotiation (ALPN) IDs
-
-   [RFC9460] defines the "alpn" key, which is used to identify the
-   service binding to a protocol suite using its Application-Layer
-   Protocol Negotiation (ALPN) ID [RFC7301].  For CoAP over TLS an ALPN
-   ID was defined in [RFC8323].  As it is not advisable to re-use the
-   same ALPN ID for a different transport layer, an ALPN for CoAP over
-   DTLS is also registered in Section 5.  To discover CoAP services that
-   secure their messages with TLS or DTLS, these ALPN IDs can be used in
-   the same manner as for any other service secured with transport layer
+   To discover CoAP services that secure their messages with TLS or
+   DTLS, ALPN IDs "coap" and "co" can be used respectively in the same
+   manner as for any other service secured with transport layer
    security, as described in [RFC9460].  Other authentication mechanisms
    are currently out of scope.
 
-4.  Security Considerations
+3.  Security Considerations
 
-   Any security considerations on SVCB resource records (see [RFC9460]),
-   also apply to this document.
+   Any security considerations on ALPN (see [RFC7301]) and SVCB resource
+   records (see [RFC9460]), also apply to this document.
 
-5.  IANA Considerations
+4.  IANA Considerations
 
-5.1.  TLS ALPN for CoAP
+4.1.  TLS ALPN for CoAP
 
    The following entry has been added to the "TLS Application-Layer
    Protocol Negotiation (ALPN) Protocol IDs" registry, which is part of
@@ -143,18 +135,13 @@ Table of Contents
    *  Reference: [RFC7252] and [this document]
 
    Note that [RFC7252] does not define the use of the ALPN TLS extension
-   during connection the DTLS handshake.  This document does not change
-   that, and thus does not establish any rules like those in Section 8.2
-   of [RFC8323].
+   during the DTLS connection handshake.  This document does not change
+   this behavior, and thus does not establish any rules like those in
+   Section 8.2 of [RFC8323].
 
-6.  References
+5.  References
 
-6.1.  Normative References
-
-   [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
-              Requirement Levels", BCP 14, RFC 2119,
-              DOI 10.17487/RFC2119, March 1997,
-              <https://www.rfc-editor.org/rfc/rfc2119>.
+5.1.  Normative References
 
    [RFC7252]  Shelby, Z., Hartke, K., and C. Bormann, "The Constrained
               Application Protocol (CoAP)", RFC 7252,
@@ -166,29 +153,24 @@ Table of Contents
               Negotiation Extension", RFC 7301, DOI 10.17487/RFC7301,
               July 2014, <https://www.rfc-editor.org/rfc/rfc7301>.
 
-   [RFC8174]  Leiba, B., "Ambiguity of Uppercase vs Lowercase in RFC
-              2119 Key Words", BCP 14, RFC 8174, DOI 10.17487/RFC8174,
-              May 2017, <https://www.rfc-editor.org/rfc/rfc8174>.
-
    [RFC9460]  Schwartz, B., Bishop, M., and E. Nygren, "Service Binding
               and Parameter Specification via the DNS (SVCB and HTTPS
               Resource Records)", RFC 9460, DOI 10.17487/RFC9460,
               November 2023, <https://www.rfc-editor.org/rfc/rfc9460>.
 
-   [RFC9463]  Boucadair, M., Ed., Reddy.K, T., Ed., Wing, D., Cook, N.,
-              and T. Jensen, "DHCP and Router Advertisement Options for
-              the Discovery of Network-designated Resolvers (DNR)",
-              RFC 9463, DOI 10.17487/RFC9463, November 2023,
-              <https://www.rfc-editor.org/rfc/rfc9463>.
-
-6.2.  Informative References
+5.2.  Informative References
 
    [I-D.ietf-core-dns-over-coap]
               Lenders, M. S., Amsüss, C., Gündoğan, C., Schmidt, T. C.,
               and M. Wählisch, "DNS over CoAP (DoC)", Work in Progress,
-              Internet-Draft, draft-ietf-core-dns-over-coap-07, 28 June
-              2024, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              core-dns-over-coap-07>.
+              Internet-Draft, draft-ietf-core-dns-over-coap-09, 21
+              October 2024, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-core-dns-over-coap-09>.
+
+   [RFC4944]  Montenegro, G., Kushalnagar, N., Hui, J., and D. Culler,
+              "Transmission of IPv6 Packets over IEEE 802.15.4
+              Networks", RFC 4944, DOI 10.17487/RFC4944, September 2007,
+              <https://www.rfc-editor.org/rfc/rfc4944>.
 
    [RFC8323]  Bormann, C., Lemay, S., Tschofenig, H., Hartke, K.,
               Silverajan, B., and B. Raymor, Ed., "CoAP (Constrained
@@ -200,7 +182,9 @@ Appendix A.  Change Log
 
 Acknowledgments
 
-   TODO acknowledge.
+   We like to thank Rich Salz for the expert review on the "co" ALPN ID
+   allocation.  We also like to thank Mohamed Boucadair and Ben Schwartz
+   for their early review before WG adoption of this draft.
 
 Authors' Addresses
 
