@@ -22,8 +22,8 @@ venue:
     type: "Working Group"
     mail: "core@ietf.org"
     arch: "https://mailarchive.ietf.org/arch/browse/core/"
-    github: "anr-bmbf-pivot/draft-ietf-core-coap-dtls-alpn"
-    latest: "https://anr-bmbf-pivot.github.io/draft-ietf-core-coap-dtls-alpn/draft-ietf-core-coap-dtls-alpn.html"
+    github: "core-wg/coap-dtls-alpn"
+    latest: "https://core-wg.github.io/coap-dtls-alpn/draft-ietf-core-coap-dtls-alpn.html"
 
 author:
  -  fullname: Martine Sophie Lenders
