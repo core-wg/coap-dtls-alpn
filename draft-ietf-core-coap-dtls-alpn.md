@@ -114,6 +114,12 @@ This document does not change this behavior, and thus does not establish any rul
 
 # Change Log
 
+## Since [draft-ietf-core-coap-dtls-alpn-00]
+
+- Fix ALPN ID for CoAP over TLS
+- Change intended status to Informational
+
+[draft-ietf-core-coap-dtls-alpn-00]: https://datatracker.ietf.org/doc/draft-ietf-core-coap-dtls-alpn/00/
 
 # Acknowledgments
 {:unnumbered}
