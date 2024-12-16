@@ -5,12 +5,12 @@
 Constrained RESTful Environments                           M. S. Lenders
 Internet-Draft                                                TU Dresden
 Intended status: Standards Track                               C. Amsüss
-Expires: 9 March 2025                                                   
+Expires: 19 June 2025                                                   
                                                            T. C. Schmidt
                                                              HAW Hamburg
                                                              M. Wählisch
                                         TU Dresden & Barkhausen Institut
-                                                        5 September 2024
+                                                        16 December 2024
 
 
                 ALPN ID Specification for CoAP over DTLS
@@ -53,7 +53,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 9 March 2025.
+   This Internet-Draft will expire on 19 June 2025.
 
 Copyright Notice
 
@@ -99,7 +99,7 @@ Table of Contents
 
 2.  Application-Layer Protocol Negotiation (ALPN) IDs
 
-   For CoAP over TLS an ALPN ID was defined as "coaps" in [RFC8323].  As
+   For CoAP over TLS an ALPN ID was defined as "coap" in [RFC8323].  As
    it is not advisable to re-use the same ALPN ID for a different
    transport layer, an ALPN for CoAP over DTLS is registered in
    Section 4.
@@ -110,7 +110,7 @@ Table of Contents
    link-layer fragmentation, such as 6LoWPAN [RFC4944].
 
    To discover CoAP services that secure their messages with TLS or
-   DTLS, ALPN IDs "coaps" and "co" can be used respectively in the same
+   DTLS, ALPN IDs "coap" and "co" can be used respectively in the same
    manner as for any other service secured with transport layer
    security, as described in [RFC9460].  Other authentication mechanisms
    are currently out of scope.
@@ -163,9 +163,9 @@ Table of Contents
    [I-D.ietf-core-dns-over-coap]
               Lenders, M. S., Amsüss, C., Gündoğan, C., Schmidt, T. C.,
               and M. Wählisch, "DNS over CoAP (DoC)", Work in Progress,
-              Internet-Draft, draft-ietf-core-dns-over-coap-07, 28 June
-              2024, <https://datatracker.ietf.org/doc/html/draft-ietf-
-              core-dns-over-coap-07>.
+              Internet-Draft, draft-ietf-core-dns-over-coap-09, 21
+              October 2024, <https://datatracker.ietf.org/doc/html/
+              draft-ietf-core-dns-over-coap-09>.
 
    [RFC4944]  Montenegro, G., Kushalnagar, N., Hui, J., and D. Culler,
               "Transmission of IPv6 Packets over IEEE 802.15.4
