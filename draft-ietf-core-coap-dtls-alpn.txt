@@ -4,7 +4,7 @@
 
 Constrained RESTful Environments                           M. S. Lenders
 Internet-Draft                                                TU Dresden
-Intended status: Standards Track                               C. Amsüss
+Intended status: Informational                                 C. Amsüss
 Expires: 19 June 2025                                                   
                                                            T. C. Schmidt
                                                              HAW Hamburg
@@ -80,6 +80,7 @@ Table of Contents
      5.1.  Normative References
      5.2.  Informative References
    Appendix A.  Change Log
+     A.1.  Since draft-ietf-core-coap-dtls-alpn-00
    Acknowledgments
    Authors' Addresses
 
@@ -179,6 +180,14 @@ Table of Contents
               <https://www.rfc-editor.org/rfc/rfc8323>.
 
 Appendix A.  Change Log
+
+A.1.  Since draft-ietf-core-coap-dtls-alpn-00
+      (https://datatracker.ietf.org/doc/draft-ietf-core-coap-dtls-
+      alpn/00/)
+
+   *  Fix ALPN ID for CoAP over TLS
+
+   *  Change intended status to Informational
 
 Acknowledgments
 
