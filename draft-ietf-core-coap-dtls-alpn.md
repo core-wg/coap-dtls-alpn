@@ -1,7 +1,7 @@
 ---
 title: "ALPN ID Specification for CoAP over DTLS "
 abbrev: "CoRE ALPN"
-category: std
+category: info
 
 docname: draft-ietf-core-coap-dtls-alpn-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
