@@ -79,14 +79,14 @@ An ALPN ID for CoAP service secured by TLS has already been specified in {{-coap
 
 # Application-Layer Protocol Negotiation (ALPN) IDs
 
-For CoAP over TLS an ALPN ID was defined as "coaps" in {{-coap-tcp}}.
+For CoAP over TLS an ALPN ID was defined as "coap" in {{-coap-tcp}}.
 As it is not advisable to re-use the same ALPN ID for a different transport layer, an ALPN for
 CoAP over DTLS is registered in {{iana}}.
 
 ALPN ID values have variable length.
 Here, a short value ("co") is allocated for CoAP over DTLS, as this can avoid fragmentation of Client Hello and Server Hello messages in constrained networks with link-layer fragmentation, such as 6LoWPAN {{-6lo}}.
 
-To discover CoAP services that secure their messages with TLS or DTLS, ALPN IDs "coaps" and "co" can be used respectively in
+To discover CoAP services that secure their messages with TLS or DTLS, ALPN IDs "coap" and "co" can be used respectively in
 the same manner as for any other service secured with transport layer security, as
 described in {{-svcb}}.
 Other authentication mechanisms are currently out of scope.
