@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-12-15T01:52:47.421955+00:00",
+  "timestamp": "2024-12-17T01:45:58.202370+00:00",
   "repo": "core-wg/coap-dtls-alpn",
   "labels": [
     {
@@ -55,15 +55,15 @@
       "id": "I_kwDOMswq686fBcRE",
       "title": "TLS ALPN is \"coap\", not \"coaps\"",
       "url": "https://github.com/core-wg/coap-dtls-alpn/issues/1",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "cabo",
       "authorAssociation": "MEMBER",
       "assignees": [],
       "labels": [],
       "body": "Section 2 claims:\r\n\r\n> For CoAP over TLS an ALPN ID was defined as \"coaps\" in [[RFC8323](https://www.ietf.org/archive/id/draft-ietf-core-coap-dtls-alpn-00.html#RFC8323)].\r\n\r\nThat is not true, please see \r\n\r\nhttps://www.rfc-editor.org/rfc/rfc8323.html#section-11.7\r\nand\r\nhttps://www.iana.org/assignments/tls-extensiontype-values/tls-extensiontype-values.xhtml#alpn-protocol-ids",
       "createdAt": "2024-11-18T10:07:51Z",
-      "updatedAt": "2024-11-18T13:37:17Z",
-      "closedAt": null,
+      "updatedAt": "2024-12-16T10:17:08Z",
+      "closedAt": "2024-12-16T10:17:08Z",
       "comments": [
         {
           "author": "miri64",
@@ -81,26 +81,42 @@
       "id": "PR_kwDOMswq686CP8Ly",
       "title": "Fix ALPN ID for CoAP over TLS",
       "url": "https://github.com/core-wg/coap-dtls-alpn/pull/2",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "miri64",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Fixes #1",
       "createdAt": "2024-11-18T13:37:11Z",
-      "updatedAt": "2024-11-18T13:37:11Z",
+      "updatedAt": "2024-12-16T10:17:10Z",
       "baseRepository": "core-wg/coap-dtls-alpn",
       "baseRefName": "main",
       "baseRefOid": "a35578d54d82dec1ca3a961508e4b7524a7cc604",
       "headRepository": "core-wg/coap-dtls-alpn",
       "headRefName": "i0001",
       "headRefOid": "e10bf9b8a1fe4e525b13a26582548edc2ce5d0c0",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-12-16T10:17:07Z",
+      "mergedAt": "2024-12-16T10:17:07Z",
+      "mergedBy": "miri64",
+      "mergeCommit": {
+        "oid": "23bba968af5cf95c9ef0bbb0cf3d881d0123d253"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOMswq686VWDPe",
+          "commit": {
+            "abbreviatedOid": "e10bf9b"
+          },
+          "author": "cabo",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "This is a necessary bugfix",
+          "createdAt": "2024-12-16T09:14:21Z",
+          "updatedAt": "2024-12-16T09:14:21Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
