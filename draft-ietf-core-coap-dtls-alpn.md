@@ -134,4 +134,4 @@ This document does not change this behavior, and thus does not establish any rul
 
 We like to thank Rich Salz for the expert review on the "co" ALPN ID allocation.
 We also like to thank Mohamed Boucadair and Ben Schwartz for their early review before WG adoption
-of this draft.
+of this draft and Esko Dijk, Thomas Fossati, and Marco Tiloca for their feedback and comments.
