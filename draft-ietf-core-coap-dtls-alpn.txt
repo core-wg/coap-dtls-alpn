@@ -5,12 +5,12 @@
 Constrained RESTful Environments                           M. S. Lenders
 Internet-Draft                                                TU Dresden
 Intended status: Informational                                 C. Amsüss
-Expires: 31 August 2025                                                 
+Expires: 1 September 2025                                               
                                                            T. C. Schmidt
                                                              HAW Hamburg
                                                              M. Wählisch
                                         TU Dresden & Barkhausen Institut
-                                                        27 February 2025
+                                                        28 February 2025
 
 
                 ALPN ID Specification for CoAP over DTLS
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 31 August 2025.
+   This Internet-Draft will expire on 1 September 2025.
 
 Copyright Notice
 
@@ -94,11 +94,11 @@ Table of Contents
    via the DNS, using SVCB resource records with the "alpn" Service
    Parameter Keys [RFC9460].  As an example, this information can be
    obtained as part of the discovery of DNS over CoAP (DoC) servers (see
-   [I-D.ietf-core-dns-over-coap]) that deploy TLS or Datagram Transport
-   Layer Security (DTLS) to secure their messages.  This document
-   specifies an ALPN ID for CoAP services that are secured by transport
-   security using DTLS.  An ALPN ID for CoAP services secured by TLS has
-   already been specified in [RFC8323].
+   Section 3.2 of [I-D.ietf-core-dns-over-coap]) that deploy TLS or
+   Datagram Transport Layer Security (DTLS) to secure their messages.
+   This document specifies an ALPN ID for CoAP services that are secured
+   by transport security using DTLS.  An ALPN ID for CoAP services
+   secured by TLS has already been specified in [RFC8323].
 
 2.  Application-Layer Protocol Negotiation (ALPN) IDs
 
@@ -125,6 +125,10 @@ Table of Contents
 
 4.  IANA Considerations
 
+
+   // RFC Ed.: throughout this section, please replace RFC-XXXX with the
+   // RFC number of this specification and remove this note.
+
    This document has the following actions for IANA.
 
 4.1.  TLS ALPN for CoAP
@@ -137,7 +141,7 @@ Table of Contents
 
    *  Identification sequence: 0x63 0x6f ("co")
 
-   *  Reference: [RFC7252] and [this document]
+   *  Reference: [RFC7252] and [RFC-XXXX]
 
    Note that [RFC7252] does not define the use of the ALPN TLS extension
    during the DTLS connection handshake.  This document does not change
@@ -197,7 +201,8 @@ Acknowledgments
 
    We like to thank Rich Salz for the expert review on the "co" ALPN ID
    allocation.  We also like to thank Mohamed Boucadair and Ben Schwartz
-   for their early review before WG adoption of this draft.
+   for their early review before WG adoption of this draft and Marco
+   Tiloca and Esko Dijk for their feedback and comments.
 
 Authors' Addresses
 
