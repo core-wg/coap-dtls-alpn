@@ -98,6 +98,12 @@ apply to this document.
 
 # IANA Considerations {#iana}
 
+[^replace-xxxx]
+
+[^replace-xxxx]: RFC Ed.: throughout this section, please replace
+    RFC-XXXX with the RFC number of this specification and remove this
+    note.
+
 This document has the following actions for IANA.
 
 ## TLS ALPN for CoAP {#iana-coap-alpn}
@@ -106,7 +112,7 @@ The following entry has been added to the "TLS Application-Layer Protocol Negoti
 
 * Protocol: CoAP (over DTLS)
 * Identification sequence: 0x63 0x6f ("co")
-* Reference: {{-coap}} and \[this document\]
+* Reference: {{-coap}} and \[RFC-XXXX\]
 
 Note that {{-coap}} does not define the use of the ALPN TLS extension during the DTLS connection handshake.
 This document does not change this behavior, and thus does not establish any rules like those in {{Section 8.2 of -coap-tcp}}.
