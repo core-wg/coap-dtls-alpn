@@ -73,7 +73,7 @@ transport-layer-secured Constrained Application Protocol (CoAP) services.
 
 Application-Layer Protocol Negotiation (ALPN) enables communicating parties to agree on an application-layer protocol during a Transport Layer Security (TLS) handshake using an ALPN ID {{-alpn}}.
 This ALPN ID can be discovered for services as part of Service Bindings (SVCB) via the DNS, using SVCB resource records with the "alpn" Service Parameter Keys {{-svcb}}.
-As an example, this information can be obtained as part of the discovery of DNS over CoAP (DoC) servers (see {{-doc}}) that deploy TLS or Datagram Transport Layer Security (DTLS) to secure their messages.
+As an example, this information can be obtained as part of the discovery of DNS over CoAP (DoC) servers (see {{Section 3.2 of -doc}}) that deploy TLS or Datagram Transport Layer Security (DTLS) to secure their messages.
 This document specifies an ALPN ID for CoAP services that are secured by transport security using DTLS.
 An ALPN ID for CoAP services secured by TLS has already been specified in {{-coap-tcp}}.
 
