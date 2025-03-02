@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-02-27T01:40:22.903863+00:00",
+  "timestamp": "2025-03-02T01:45:05.082658+00:00",
   "repo": "core-wg/coap-dtls-alpn",
   "labels": [
     {
@@ -123,26 +123,42 @@
       "id": "PR_kwDOMswq686Mnk49",
       "title": "Address Marco's review on -01",
       "url": "https://github.com/core-wg/coap-dtls-alpn/pull/3",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "miri64",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "See https://mailarchive.ietf.org/arch/msg/core/x5H_XNwEKOLS7MK2NmH25jj_-l8",
       "createdAt": "2025-02-26T10:53:04Z",
-      "updatedAt": "2025-02-26T10:57:34Z",
+      "updatedAt": "2025-02-27T08:42:07Z",
       "baseRepository": "core-wg/coap-dtls-alpn",
       "baseRefName": "main",
       "baseRefOid": "3197f098aed9980c157fd8b5a5169879f3728248",
       "headRepository": "core-wg/coap-dtls-alpn",
       "headRefName": "address-marco-01-review",
       "headRefOid": "0eb0926a187c62570285d9fef3c0d5d912bc427b",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2025-02-27T08:42:01Z",
+      "mergedAt": "2025-02-27T08:42:01Z",
+      "mergedBy": "miri64",
+      "mergeCommit": {
+        "oid": "d96b4a6cba3414c9890c2d2c2a84fea6687e13fc"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDOMswq686dxkQs",
+          "commit": {
+            "abbreviatedOid": "0eb0926"
+          },
+          "author": "chrysn",
+          "authorAssociation": "MEMBER",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-02-27T08:39:57Z",
+          "updatedAt": "2025-02-27T08:39:57Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
