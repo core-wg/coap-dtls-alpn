@@ -5,12 +5,12 @@
 Constrained RESTful Environments                           M. S. Lenders
 Internet-Draft                                                TU Dresden
 Intended status: Informational                                 C. Amsüss
-Expires: 1 September 2025                                               
+Expires: 4 September 2025                                               
                                                            T. C. Schmidt
                                                              HAW Hamburg
                                                              M. Wählisch
                                         TU Dresden & Barkhausen Institut
-                                                        28 February 2025
+                                                            3 March 2025
 
 
                 ALPN ID Specification for CoAP over DTLS
@@ -54,7 +54,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 1 September 2025.
+   This Internet-Draft will expire on 4 September 2025.
 
 Copyright Notice
 
@@ -201,8 +201,9 @@ Acknowledgments
 
    We like to thank Rich Salz for the expert review on the "co" ALPN ID
    allocation.  We also like to thank Mohamed Boucadair and Ben Schwartz
-   for their early review before WG adoption of this draft and Marco
-   Tiloca and Esko Dijk for their feedback and comments.
+   for their early review before WG adoption of this draft and Esko
+   Dijk, Thomas Fossati, and Marco Tiloca for their feedback and
+   comments.
 
 Authors' Addresses
 
