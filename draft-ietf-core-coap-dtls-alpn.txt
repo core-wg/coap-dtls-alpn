@@ -81,7 +81,8 @@ Table of Contents
      5.1.  Normative References
      5.2.  Informative References
    Appendix A.  Change Log
-     A.1.  Since draft-ietf-core-coap-dtls-alpn-00
+     A.1.  Since draft-ietf-core-coap-dtls-alpn-01
+     A.2.  Since draft-ietf-core-coap-dtls-alpn-00
    Acknowledgments
    Authors' Addresses
 
@@ -189,7 +190,15 @@ Table of Contents
 
 Appendix A.  Change Log
 
-A.1.  Since draft-ietf-core-coap-dtls-alpn-00
+A.1.  Since draft-ietf-core-coap-dtls-alpn-01
+      (https://datatracker.ietf.org/doc/draft-ietf-core-coap-dtls-
+      alpn/01/)
+
+   *  Address review by Esko Dijk
+
+   *  Address review by Marco Tiloca
+
+A.2.  Since draft-ietf-core-coap-dtls-alpn-00
       (https://datatracker.ietf.org/doc/draft-ietf-core-coap-dtls-
       alpn/00/)
 
