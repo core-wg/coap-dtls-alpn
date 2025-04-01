@@ -124,6 +124,10 @@ This document does not change this behavior, and thus does not establish any rul
 
 # Change Log
 
+## Since [draft-ietf-core-coap-dtls-alpn-02]
+
+- Address shepherd review
+
 ## Since [draft-ietf-core-coap-dtls-alpn-01]
 
 - Address review by Esko Dijk
@@ -134,6 +138,7 @@ This document does not change this behavior, and thus does not establish any rul
 - Fix ALPN ID for CoAP over TLS
 - Change intended status to Informational
 
+[draft-ietf-core-coap-dtls-alpn-02]: https://datatracker.ietf.org/doc/draft-ietf-core-coap-dtls-alpn/02/
 [draft-ietf-core-coap-dtls-alpn-01]: https://datatracker.ietf.org/doc/draft-ietf-core-coap-dtls-alpn/01/
 [draft-ietf-core-coap-dtls-alpn-00]: https://datatracker.ietf.org/doc/draft-ietf-core-coap-dtls-alpn/00/
 
