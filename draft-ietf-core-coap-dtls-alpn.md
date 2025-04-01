@@ -53,15 +53,15 @@ author:
     email: m.waehlisch@tu-dresden.de
 
 normative:
+  RFC6347: dtls12
   RFC7252: coap
   RFC7301: alpn
+  RFC9147: dtls13
   RFC9460: svcb
 
 informative:
-  RFC6347: dtls12
   RFC8323: coap-tcp
   RFC8446: tls13
-  RFC9147: dtls13
   I-D.ietf-core-dns-over-coap: doc
   RFC4944: 6lo
 
