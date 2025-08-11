@@ -76,7 +76,7 @@ transport-layer-secured Constrained Application Protocol (CoAP) services.
 
 Application-Layer Protocol Negotiation (ALPN) enables communicating parties to agree on an application-layer protocol during a Transport Layer Security (TLS) handshake using an ALPN ID {{-alpn}}.
 This ALPN ID can be discovered for services as part of Service Bindings (SVCB) via the DNS, using SVCB resource records with the "alpn" Service Parameter Keys {{-svcb}}.
-As an example, applications that use the Constrained Application Protocol (CoAP) {{-coap}} can obtain this information as part of the discovery of DNS over CoAP (DoC) servers (see {{Section 3.2 of -doc}}) that deploy TLS {{-tls13}} or Datagram Transport Layer Security (DTLS) {{-dtls12}} {{-dtls13}} to secure their messages.
+As an example, applications that use the Constrained Application Protocol (CoAP) {{-coap}} can obtain this information as part of the discovery of DNS over CoAP (DoC) servers (see {{Section 3.2 of -doc}}) that deploy TLS 1.3 {{-tls13}} as well as Datagram Transport Layer Security (DTLS) 1.2 or 1.3 {{-dtls12}} {{-dtls13}} to secure their messages.
 This document specifies an ALPN ID for CoAP services that are secured by transport layer security using DTLS.
 An ALPN ID for CoAP services secured by TLS has already been specified in {{-coap-tcp}}.
 
@@ -124,6 +124,10 @@ This document does not change this behavior, and thus does not establish any rul
 
 # Change Log
 
+## Since [draft-ietf-core-coap-dtls-alpn-04]
+
+- Address Deb Cooley's IESG ballot COMMENT
+
 ## Since [draft-ietf-core-coap-dtls-alpn-03]
 
 - Make DTLS references normative
@@ -142,6 +146,7 @@ This document does not change this behavior, and thus does not establish any rul
 - Fix ALPN ID for CoAP over TLS
 - Change intended status to Informational
 
+[draft-ietf-core-coap-dtls-alpn-04]: https://datatracker.ietf.org/doc/draft-ietf-core-coap-dtls-alpn/04/
 [draft-ietf-core-coap-dtls-alpn-03]: https://datatracker.ietf.org/doc/draft-ietf-core-coap-dtls-alpn/03/
 [draft-ietf-core-coap-dtls-alpn-02]: https://datatracker.ietf.org/doc/draft-ietf-core-coap-dtls-alpn/02/
 [draft-ietf-core-coap-dtls-alpn-01]: https://datatracker.ietf.org/doc/draft-ietf-core-coap-dtls-alpn/01/
