@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta content="Common,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
-<title>RFC 9952: The Application-Layer Protocol Negotiation (ALPN) ID Specification for the Constrained Application Protocol (CoAP) over DTLS</title>
+<title>RFC 9952: Application-Layer Protocol Negotiation (ALPN) ID for CoAP over DTLS</title>
 <meta content="Martine Sophie Lenders" name="author">
 <meta content="Christian Amsüss" name="author">
 <meta content="Thomas C. Schmidt" name="author">
 <meta content="Matthias Wählisch" name="author">
 <meta content="
        This document specifies an Application-Layer Protocol Negotiation (ALPN) ID for
-transport-layer-secured Constrained Application Protocol (CoAP) services. 
+Constrained Application Protocol (CoAP) services that are secured by DTLS. 
     " name="description">
-<meta content="xml2rfc 3.31.0" name="generator">
+<meta content="xml2rfc 3.32.0" name="generator">
 <meta content="CoRE" name="keyword">
 <meta content="CoAP" name="keyword">
 <meta content="SVCB" name="keyword">
@@ -21,18 +21,18 @@ transport-layer-secured Constrained Application Protocol (CoAP) services.
 <meta content="ALPN" name="keyword">
 <meta content="9952" name="rfc.number">
 <!-- Generator version information:
-  xml2rfc 3.31.0
+  xml2rfc 3.32.0
     Python 3.12.12
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.2.1
     Jinja2 3.1.6
     lxml 6.0.2
-    platformdirs 4.5.1
+    platformdirs 4.9.4
     pycountry 24.6.1
     PyYAML 6.0.3
     requests 2.32.5
-    wcwidth 0.3.0
+    wcwidth 0.6.0
 -->
 <link href="rfc9952.xml" rel="alternate" type="application/rfc+xml">
 <link href="#copyright" rel="license">
@@ -1055,7 +1055,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <table class="ears">
 <thead><tr>
 <td class="left">RFC 9952</td>
-<td class="center">CoRE ALPN</td>
+<td class="center">ALPN ID for CoAP over DTLS</td>
 <td class="right">March 2026</td>
 </tr></thead>
 <tfoot><tr>
@@ -1100,11 +1100,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </dl>
 </div>
 <h1 id="rfcnum">RFC 9952</h1>
-<h1 id="title">The Application-Layer Protocol Negotiation (ALPN) ID Specification for the Constrained Application Protocol (CoAP) over DTLS</h1>
+<h1 id="title">Application-Layer Protocol Negotiation (ALPN) ID for CoAP over DTLS</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
 <p id="section-abstract-1">This document specifies an Application-Layer Protocol Negotiation (ALPN) ID for
-transport-layer-secured Constrained Application Protocol (CoAP) services.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+Constrained Application Protocol (CoAP) services that are secured by DTLS.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <div id="status-of-memo">
 <section id="section-boilerplate.1">
@@ -1194,7 +1194,7 @@ transport-layer-secured Constrained Application Protocol (CoAP) services.<a href
 <p id="section-1-1">Application-Layer Protocol Negotiation (ALPN) enables communicating parties to agree on an application-layer protocol during a Transport Layer Security (TLS) handshake using an ALPN ID <span>[<a href="#RFC7301" class="cite xref">RFC7301</a>]</span>.
 This ALPN ID can be discovered for services as part of Service Bindings (SVCBs) via the DNS, using SVCB resource records with the "alpn" Service Parameter Keys <span>[<a href="#RFC9460" class="cite xref">RFC9460</a>]</span>.
 As an example, applications that use the Constrained Application Protocol (CoAP) <span>[<a href="#RFC7252" class="cite xref">RFC7252</a>]</span> can obtain this information as part of the discovery of DNS over CoAP (DoC) servers (see <span><a href="https://rfc-editor.org/rfc/rfcPRE-9953#section-3.2" class="relref">Section 3.2</a> of [<a href="#PRE-RFC9953" class="cite xref">PRE-RFC9953</a>]</span>) that deploy TLS 1.3 <span>[<a href="#RFC8446" class="cite xref">RFC8446</a>]</span> as well as Datagram Transport Layer Security (DTLS) 1.2 or 1.3 <span>[<a href="#RFC6347" class="cite xref">RFC6347</a>]</span> <span>[<a href="#RFC9147" class="cite xref">RFC9147</a>]</span> to secure their messages.
-This document specifies an ALPN ID for CoAP services that are secured by TLS using DTLS.
+This document specifies an ALPN ID for CoAP services that are secured by DTLS.
 An ALPN ID for CoAP services secured by TLS has already been specified in <span>[<a href="#RFC8323" class="cite xref">RFC8323</a>]</span>.<a href="#section-1-1" class="pilcrow">¶</a></p>
 </section>
 </div>
@@ -1324,6 +1324,7 @@ This document does not change this behavior and thus does not establish any rule
 <p id="appendix-A-1">We would like to thank <span class="contact-name">Rich Salz</span> for the expert review on the "co" ALPN ID allocation.
 We would also like to thank <span class="contact-name">Mohamed Boucadair</span> and <span class="contact-name">Ben Schwartz</span> for their early reviews before WG adoption
 of this specification and <span class="contact-name">Esko Dijk</span>, <span class="contact-name">Thomas Fossati</span>, and <span class="contact-name">Marco Tiloca</span> for their feedback and comments.<a href="#appendix-A-1" class="pilcrow">¶</a></p>
+<p id="appendix-A-2">This work was supported in parts by the German Federal Ministry of Research, Technology, and Space (BMFTR) under the grant numbers 16KIS1386K (TU Dresden) and 16KIS1387 (HAW Hamburg) within the research project PIVOT and under the grant numbers 16KIS1694K (TU Dresden) and 16KIS1695 (HAW Hamburg) within the research project C-ray4edge.<a href="#appendix-A-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="authors-addresses">
